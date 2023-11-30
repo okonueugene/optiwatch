@@ -6,7 +6,7 @@
 }
 body{
     min-height: 100vh;
-    background: url('https://cdn.pixabay.com/photo/2018/05/04/18/37/technology-3374658_960_720.jpg');
+    background: url('/images/technology.jpg');
     background-size: cover;
 }
 .content{
