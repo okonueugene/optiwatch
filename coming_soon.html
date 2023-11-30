@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--divinectorweb.com-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming Soon Page Using Html CSS & Javascript</title>
+    <link rel="stylesheet" href="coming.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h2>Coming Soon</h2>
+      <div class="timing">00 : 00 : 00 : 00</div>
+      <p>
+        We are working hard to improve our site and we'll be ready to launch
+        soon ...
+      </p>
+    </div>
+
+    <script>
+      let customeDate = new Date("September 10, 2022 12:00:00").getTime();
+      let timer = setInterval(timing, 1000);
+      function timing() {
+        let now = new Date().getTime();
+        let x = customeDate - now;
+        if (x > 0) {
+          let days = Math.floor(x / (1000 * 60 * 60 * 24));
+
+          let hours = Math.floor(
+            (x % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+
+          let mins = Math.floor((x % (1000 * 60 * 60)) / (1000 * 60));
+
+          let secs = Math.floor((x % (1000 * 60)) / 1000);
+
+          let time = `${days}d : ${hours}h : ${mins}m : ${secs}s`;
+          document.querySelector(".timing").innerHTML = time;
+        }
+      }
+    </script>
+  </body>
+</html>
